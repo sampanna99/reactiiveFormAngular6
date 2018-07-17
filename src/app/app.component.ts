@@ -23,6 +23,15 @@ export class AppComponent implements OnInit {
       'hobbies': new FormArray([])
     });
     this.signupForm.valueChanges.subscribe((value) => console.log(value));
+//you have patch value
+    this.signupForm.setValue({
+      'userData': {
+        'username': 'Max',
+        'email': 'max@test.com'
+      },
+      'gender': 'male',
+      'hobbies': []
+    });
   }
 onSubmit(){
   console.log(this.signupForm);
